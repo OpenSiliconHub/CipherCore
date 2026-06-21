@@ -32,34 +32,34 @@
 // ============================================================================
 
 module splitmix64 (
-  input clk,              // Clock signal
-  input rst,              // Reset signal (synchronous to clk)
-  input en,               // Enable signal (generate new random number)
-  input [63:0] data_in,   // Seed input (initial state)
-  output reg [63:0] out   // Random number output
+    input         clk,
+    input         rst,
+    input         en,
+    input  [63:0] data_in,
+    output reg [63:0] out
 );
 
-  reg [63:0] state;       // Internal state register
-  reg [63:0] z;           // Temporary variable for mixing
+    reg [63:0] state;
 
-  always @(posedge clk or posedge rst) begin
-    if (rst) begin
-      // Initialize state with seed when reset is asserted
-      state <= data_in;
-      out   <= 64'd0;
-    end else if (en) begin
-      // Step 1: Increment state by golden ratio constant
-      // This ensures the state moves through the entire 64-bit space.
-      state <= state + 64'h9E3779B97F4A7C15;
+    wire [63:0] z1;
+    wire [63:0] z2;
+    wire [63:0] z3;
+    wire [63:0] result;
 
-      // Step 2: Apply mixing transformations
-      z = state;
-      z = (z ^ (z >> 30)) * 64'hBF58476D1CE4E5B9;  // First scramble
-      z = (z ^ (z >> 27)) * 64'h94D049BB133111EB;  // Second scramble
-      z = z ^ (z >> 31);                           // Final XOR shift
+    assign z1 = state + 64'h9E3779B97F4A7C15;
+    assign z2 = (z1 ^ (z1 >> 30)) * 64'hBF58476D1CE4E5B9;
+    assign z3 = (z2 ^ (z2 >> 27)) * 64'h94D049BB133111EB;
+    assign result = z3 ^ (z3 >> 31);
 
-      // Step 3: Output the mixed value
-      out <= z;
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            state <= data_in;
+            out   <= 64'd0;
+        end
+        else if (en) begin
+            state <= z1;
+            out   <= result;
+        end
     end
-  end
+
 endmodule
