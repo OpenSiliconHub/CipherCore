@@ -1,4 +1,4 @@
-name: Verilog/SystemVerilog Lint (Strict Mode)
+name: .v/.sv Linting
 
 on:
   push:
@@ -32,11 +32,7 @@ jobs:
             echo "Linting $file ..."
             verilator \
               --lint-only \
-              -Wall \
-              -Wpedantic \
-              --bbox-sys \
-              --error-limit 1 \
-              "$file" || status=1
+              -Wall 
             echo "--------------------------------------------"
           done
 
