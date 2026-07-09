@@ -1,0 +1,8 @@
+v 4
+file "C:\OSH-library\SRC\CDC\toggle_synchronizer\sim\" "..\tb\toggle_synchronizer_tb\src\toggle_synchronizer_tb.vhd" "32ed8f844c7d1d776f1364fa7591535d88f693a3" "20260708072621.328":
+  entity toggle_synchronizer_tb at 5( 196) + 0 on 14;
+  architecture sim of toggle_synchronizer_tb at 21( 582) + 0 on 15;
+file "C:\OSH-library\SRC\CDC\toggle_synchronizer\sim\" "..\src\toggle_synchronizer.vhd" "679a02bdeb95d57218fef177813f0c06eee510c6" "20260708072621.278":
+  entity toggle_synchronizer at 5( 187) + 0 on 11;
+  package toggle_synchronizer_pkg at 28( 766) + 0 on 12;
+  architecture rtl of toggle_synchronizer at 50( 1266) + 0 on 13;
