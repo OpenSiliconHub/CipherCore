@@ -9,122 +9,69 @@
  OSH-LIBRARY
 </pre>
 
+<p align="center"><i>A growing collection of reusable Verilog hardware cores</i></p>
 
-<p align="center">
-<!-- DOI Badge (Shields.io fallback) -->
-  <a href="https://doi.org/10.5281/zenodo.17895634">
-    <img src="https://img.shields.io/badge/DOI-10.5281/zenodo.17895634-blue" alt="DOI">
-  </a>
-  <!-- Verilog Lint Badge -->
-  <a href="https://github.com/MrAbhi19/Verilog_Library/actions/workflows/linting.yml">
-    <img src="https://github.com/MrAbhi19/Verilog_Library/actions/workflows/linting.yml/badge.svg" alt="Verilog Lint (Strict Mode)">
-  </a>
-  <!-- Verilog Simulation Badge -->
-  <a href="https://github.com/MrAbhi19/Verilog_Library/actions/workflows/verilog-test.yml">
-    <img src="https://github.com/MrAbhi19/Verilog_Library/actions/workflows/verilog-test.yml/badge.svg" alt="Verilog Simulation">
-  </a>
-</p>
+OSH-Library is an open collection of parameterized, reusable HDL cores — built for learning, prototyping, and dropping into your own digital design projects. Right now the focus is on **cryptographic cores**, **PRNGs**, and small **clock-domain-crossing (CDC)** building blocks.
 
-
-<p align="center"><i>Reusable Verilog cores focused on cryptography, DSP, and neural acceleration</i></p>
-
-
-A growing collection of reusable, parameterized hardware cores for learning, prototyping, and integration into advanced digital design projects. Our primary focus is on cryptographic cores, DSP cores, neural accelerators, and other high‑performance building blocks for modern systems.
-
-
-Whether you’re a beginner exploring Verilog or an experienced designer, your contributions are welcome!
+Whether you're just getting started with Verilog or you've been doing this for years, contributions are welcome!
 
 ---
 
 ## Getting Started
 
-This repository contains multiple independent, reusable Verilog hardware cores.
-Each core can be explored, simulated, and integrated individually using standard
-HDL tools.
-
-This section provides general guidance to help new users get started quickly.
-Core-specific instructions may vary and are typically documented within the
-respective core directories.
+Each core in this repo is self-contained — you can explore, simulate, and integrate them one at a time.
 
 ### Prerequisites
-- A Verilog simulator (e.g., Icarus Verilog, Verilator, or a compatible simulator)
-- GTKWave or a compatible waveform viewer (optional, for signal inspection)
+- A Verilog simulator (e.g., Icarus Verilog, Verilator, or similar)
+- GTKWave or another waveform viewer (optional, for inspecting signals)
 
-### General Simulation Flow
-1. Navigate to the directory of the desired hardware core.
-2. Compile the Verilog source files along with the corresponding testbench.
-3. Run the simulation using your chosen simulator.
-4. Inspect simulation logs or waveforms to verify correct functionality.
+### Simulation Flow
+1. Navigate to the core you're interested in.
+2. Compile the RTL source alongside its testbench.
+3. Run the simulation with your simulator of choice.
+4. Check the logs or waveform to confirm it behaves as expected.
 
----
-
-## Core Examples
-
-We focus on building **powerful hardware cores** that can serve as reusable building blocks.  
-Here’s a snapshot of what we have right now and what we might consider building later:
-
-###  Cryptographic Cores
-- **ChaCha20** stream cipher   [➡️](./SRC/Chacha20/)
-- **AES** block cipher   [➡️](./SRC/AES/)
-- **PRNGs** — Multiple modules including PCG64-DXSM, SplitMix64, philox-4*32-10, and 5 other PRNG variants [➡️](./SRC/)
-- SHA‑1 / SHA‑256 hash cores
-- RSA / ECC accelerators
-- Grain‑128 / Grain‑128a
+Most cores already include a pre-run simulation log and waveform screenshot in their folder, so you can see expected output before running anything yourself.
 
 ---
 
-###  DSP Cores
-- FIR, IIR filter modules
-- FFT (Fast Fourier Transform) prototype
-- Convolution engines for signal/image processing
+## What's Inside
+
+### Cryptographic Cores
+- **[ChaCha20](./crypto/Chacha20/)** — stream cipher, verified against RFC 8439 test vectors, includes a technical paper
+- **[Trivium](./crypto/trivium/)** — stream cipher core
+
+### PRNGs
+- **[LCG](./PRNG/LCG/)** — Linear Congruential Generator
+- **[Xorshift32](./PRNG/Xorshift/Xorshift32/)**
+- **[SplitMix64](./PRNG/SplitMix64/)**
+- **[Philox 4x32-10](./PRNG/Philox/)**
+- **[PCG-XSH-RR](./PRNG/PCG/PCG-XSH-RR/)**
+- **[PCG64-DXSM](./PRNG/PCG/PCG64-DXSM/)**
+
+### CDC (Clock Domain Crossing)
+- **[Toggle Synchronizer](./CDC/toggle_synchronizer/)**
 
 ---
 
-###  Neural Acceleration
-- Basic matrix multiplication core
-- Convolutional layer accelerators
-- Activation function modules (ReLU, Sigmoid, Tanh)
-- RNN/LSTM building blocks
-- Quantized neural network primitives
+## Verification Status
+
+All cores here are checked with simulation-based testbenches. **Formal verification hasn't been added yet — it's on our roadmap and something we're actively working on.** Until then, treat these cores as simulation-verified, not formally proven.
 
 ---
 
-##  Contribution Guidelines
+## Contributing
 
-Read the contribution guide here:  
-👉 [Contribution Guidelines](./Contribution.md)
-
-If you run into any issues or want help contributing, feel free to open a Discussion:  
-👉 [Discussions](../../discussions)
+Got a core to add, a bug to report, or an improvement in mind? Check out the [Contribution Guidelines](./Contribution.md) or start a [Discussion](../../discussions) — we'd love to hear from you.
 
 ---
 
+## Contact / Discussions
 
-##  Citation
-
-If you use this work in your research, please cite it using the Zenodo DOI:
-
-[![DOI](https://zenodo.org/badge/1097102485.svg)](https://doi.org/10.5281/zenodo.17895634)
-
-### BibTeX
-```bibtex
-@misc{OpenSiliconHub_ChaCha20_2025,
-  author       = {Abhilash M},
-  title        = {OpenSiliconHub: ChaCha20 Hardware Core},
-  year         = {2025},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.17895634},
-  url          = {https://doi.org/10.5281/zenodo.17895634}
-}
-```
-
-##  Contact / Discussions
-
-For module requests, ideas, improvements, or collaboration, use the **GitHub Discussions** section of the repository.
+For module requests, ideas, or collaboration, head over to the **GitHub Discussions** tab.
 
 ---
 
-##  License
-This project is licensed under the MIT License — see [LICENSE](./LICENSE) for details.
+## License
 
----
+This project is licensed under the **Apache License 2.0** — see [LICENSE](./LICENSE) for details.
