@@ -32,7 +32,7 @@ jobs:
               status=1
             fi
           done < <(
-            find SRC -type f \( -name "*.v" -o -name "*.sv" \) \
+            find crypto -type f \( -name "*.v" -o -name "*.sv" \) \
               ! -name "*_tb.v" \
               ! -name "*_tb.sv" \
               ! -name "testbench.v" \
