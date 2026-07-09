@@ -1,0 +1,31 @@
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module lcg declared here: design.sv:40
+Applying reset...
+VCD info: dumpfile lcg_tb.vcd opened for output.
+Starting LCG sequence...
+Time=15000 | out=83657912
+Time=25000 | out=83657912
+Time=35000 | out=312078491
+Time=45000 | out=2115172594
+Time=55000 | out=2061761517
+Time=65000 | out=304914172
+Time=75000 | out=13611471
+Time=85000 | out=1046447446
+Time=95000 | out=880076481
+Time=105000 | out=609627776
+Time=115000 | out=50205507
+Time=125000 | out=773009658
+Time=135000 | out=568161237
+Time=145000 | out=1221711684
+Time=155000 | out=1756047607
+Time=165000 | out=938196958
+Time=175000 | out=921982761
+Time=185000 | out=1206615368
+Time=195000 | out=763578091
+Time=205000 | out=724841986
+Simulation complete.
+testbench.sv:54: $finish called at 205000 (1ps)
+Finding VCD file...
+./lcg_tb.vcd

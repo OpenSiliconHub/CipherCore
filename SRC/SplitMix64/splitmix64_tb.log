@@ -1,0 +1,24 @@
+[2025-12-07 08:49:24 UTC] iverilog '-Wall' '-g2012' design.sv testbench.sv  && unbuffer vvp a.out  
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module splitmix64 declared here: design.sv:35
+Applying reset...
+VCD info: dumpfile splitmix64_tb.vcd opened for output.
+Generating random numbers:
+Random Output = 0000000000000000
+Random Output = 9629f58e8ec5b906
+Random Output = 161922c645ce50e8
+Random Output = ad760cafa1697b60
+Random Output = 3501ff44902ca50d
+Random Output = 417cb9a826d831df
+Random Output = 99af6f9b0c4476b6
+Random Output = 5d51f5f75b762c59
+Random Output = 66239e8c309a282b
+Random Output = 53e01f580916c5cb
+Simulation complete.
+testbench.sv:57: $finish called at 105000 (1ps)
+Finding VCD file...
+./splitmix64_tb.vcd
+[2025-12-07 08:49:25 UTC] Opening EPWave...
+Done

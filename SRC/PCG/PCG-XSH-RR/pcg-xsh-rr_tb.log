@@ -1,0 +1,40 @@
+[2025-12-07 05:23:34 UTC] iverilog '-Wall' '-g2012' design.sv testbench.sv  && unbuffer vvp a.out  
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module pcg declared here: design.sv:50
+VCD info: dumpfile pcg_wave.vcd opened for output.
+Time=35000  Random Output = 1e1f95c9
+Time=45000  Random Output = xxxxxxxx
+Time=55000  Random Output = 08d27c27
+Time=65000  Random Output = 4cc0bc7b
+Time=75000  Random Output = 522dbc4f
+Time=85000  Random Output = 5e45ed22
+Time=95000  Random Output = 553576a2
+Time=105000  Random Output = a70f26a3
+Time=115000  Random Output = 3694fe70
+Time=125000  Random Output = 6ab6abeb
+Time=135000  Random Output = ea4f8252
+Time=145000  Random Output = f7d178bb
+Time=155000  Random Output = bbfc1b55
+Time=165000  Random Output = 5e85ccaa
+Time=175000  Random Output = c9e2293e
+Time=185000  Random Output = 53e4a2a8
+Time=195000  Random Output = f7cdb1e8
+Time=205000  Random Output = 7d0584e5
+Time=215000  Random Output = 7a131910
+Time=225000  Random Output = a997d8c8
+testbench.sv:56: $finish called at 245000 (1ps)
+Creating result.zip...
+  adding: a.out (deflated 70%)
+  adding: pcg_wave.vcd (deflated 76%)
+  adding: work/ (stored 0%)
+  adding: testbench.sv (deflated 57%)
+  adding: design.sv (deflated 63%)
+  adding: ACCELLERA_OVL_VHDL_LIB/ (stored 0%)
+  adding: run.sh (deflated 33%)
+  adding: .bash_profile (deflated 21%)
+  adding: .bash_logout (stored 0%)
+  adding: .bashrc (deflated 23%)
+[2025-12-07 05:23:34 UTC] Waiting for download...
+Done

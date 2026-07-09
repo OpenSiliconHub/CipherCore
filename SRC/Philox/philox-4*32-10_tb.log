@@ -1,0 +1,19 @@
+[2025-12-07 09:44:32 UTC] iverilog '-Wall' '-g2012' design.sv testbench.sv  && unbuffer vvp a.out  
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module philox4x32_10 declared here: design.sv:31
+Applying reset...
+VCD info: dumpfile philox4x32_10_tb.vcd opened for output.
+Generating random numbers:
+Random Output = 00000000000000000000000000000000
+Random Output = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Random Output = f7987fd700000000c108a6b086004e16
+Random Output = d733a264000000000961000e49007521
+Random Output = 38be10c700000000bf7780900c009c2c
+Simulation complete.
+testbench.sv:61: $finish called at 55000 (1ps)
+Finding VCD file...
+./philox4x32_10_tb.vcd
+[2025-12-07 09:44:33 UTC] Opening EPWave...
+Done

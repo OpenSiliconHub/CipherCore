@@ -1,0 +1,43 @@
+[2025-12-07 06:00:49 UTC] iverilog '-Wall' '-g2012' design.sv testbench.sv  && unbuffer vvp a.out  
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module xorshift32 declared here: design.sv:38
+VCD info: dumpfile xorshift32_tb.vcd opened for output.
+Applying reset...
+Starting PRNG sequence...
+Time=15000 | Random Output = 00000000
+Time=25000 | Random Output = 12345678
+Time=35000 | Random Output = 54be9978
+Time=45000 | Random Output = c36db678
+Time=55000 | Random Output = aedb7978
+Time=65000 | Random Output = 75b45678
+Time=75000 | Random Output = c33e9978
+Time=85000 | Random Output = a4edb678
+Time=95000 | Random Output = 395b7978
+Time=105000 | Random Output = 12345678
+Time=115000 | Random Output = 54be9978
+Time=125000 | Random Output = c36db678
+Time=135000 | Random Output = aedb7978
+Time=145000 | Random Output = 75b45678
+Time=155000 | Random Output = c33e9978
+Time=165000 | Random Output = a4edb678
+Time=175000 | Random Output = 395b7978
+Time=185000 | Random Output = 12345678
+Time=195000 | Random Output = 54be9978
+Time=205000 | Random Output = c36db678
+Generator disabled.
+testbench.sv:79: $finish called at 225000 (1ps)
+Creating result.zip...
+  adding: a.out (deflated 72%)
+  adding: xorshift32_tb.vcd (deflated 83%)
+  adding: work/ (stored 0%)
+  adding: testbench.sv (deflated 57%)
+  adding: design.sv (deflated 60%)
+  adding: ACCELLERA_OVL_VHDL_LIB/ (stored 0%)
+  adding: run.sh (deflated 33%)
+  adding: .bash_profile (deflated 21%)
+  adding: .bash_logout (stored 0%)
+  adding: .bashrc (deflated 23%)
+[2025-12-07 06:00:49 UTC] Waiting for download...
+Done

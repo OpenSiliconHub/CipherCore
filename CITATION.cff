@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use OpenSiliconHub's ChaCha20 hardware core, please cite this release."
+title: "OpenSiliconHub: ChaCha20 Hardware Core"
+version: "1.0.0"
+date-released: "2025-12-01"
+authors:
+  - given-names: "Abhilash"
+    family-names: "M"
+    affiliation: "Kalasalingam Academy of Research and Education"
+    orcid: "0009-0003-7242-2819"   
+identifiers:
+  - type: url
+    value: "https://github.com/MrAbhi19/OpenSiliconHub"
+keywords:
+  - hardware security
+  - cryptography
+  - ChaCha20
+  - ARX cipher
+  - Verilog
+  - FPGA
+  - ASIC
+  - open-source hardware
+  - stream cipher
+  - hardware implementation
+abstract: >
+  A parameterized, area-efficient Verilog hardware implementation of the ChaCha20
+  stream cipher, supporting ChaCha8, ChaCha12, and ChaCha20 variants. This release
+  includes synthesizable RTL, testbenches validated against RFC 8439, synthesis
+  scripts, performance analysis, reproducibility artifacts, and a technical paper.
+license: "MIT"
+repository-code: "https://github.com/MrAbhi19/OpenSiliconHub"
+type: software

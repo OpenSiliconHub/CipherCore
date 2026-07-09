@@ -1,0 +1,24 @@
+[2025-12-07 09:29:20 UTC] iverilog '-Wall' '-g2012' design.sv testbench.sv  && unbuffer vvp a.out  
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module pcg_dxsm declared here: design.sv:18
+Applying reset...
+VCD info: dumpfile pcg_dxsm_tb.vcd opened for output.
+Generating random numbers:
+Random Output = 0000000000000000
+Random Output = xxxxxxxxxxxxxxxx
+Random Output = fc3392bbc8ac1959
+Random Output = c6d5c4eab48dac87
+Random Output = dc28e9d6d256a5af
+Random Output = 9bd05b240393ab27
+Random Output = 434d5f7496a91c6d
+Random Output = 334c0bcdefdeb7f0
+Random Output = 253f04890cc4c1c8
+Random Output = d7183f45fd058968
+Simulation complete.
+testbench.sv:57: $finish called at 105000 (1ps)
+Finding VCD file...
+./pcg_dxsm_tb.vcd
+[2025-12-07 09:29:20 UTC] Opening EPWave...
+Done
