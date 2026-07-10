@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //==============================================================================
 // Copyright (c) 2026 opensiliconhub contributors
-// SPDX-License-Identifier : SHL-2.0
+// SPDX-License-Identifier : Apache-2.0
 //
 // Module: trivium
 // Description: Trivium Stream Cipher -- Spec-compliant implementation.
