@@ -41,17 +41,6 @@ Most cores already include a pre-run simulation log and waveform screenshot in t
 - **[ChaCha20](./crypto/Chacha20/)** — stream cipher, verified against RFC 8439 test vectors, includes a technical paper
 - **[Trivium](./crypto/trivium/)** — stream cipher core
 
-### PRNGs
-- **[LCG](./PRNG/LCG/)** — Linear Congruential Generator
-- **[Xorshift32](./PRNG/Xorshift/Xorshift32/)**
-- **[SplitMix64](./PRNG/SplitMix64/)**
-- **[Philox 4x32-10](./PRNG/Philox/)**
-- **[PCG-XSH-RR](./PRNG/PCG/PCG-XSH-RR/)**
-- **[PCG64-DXSM](./PRNG/PCG/PCG64-DXSM/)**
-
-### CDC (Clock Domain Crossing)
-- **[Toggle Synchronizer](./CDC/toggle_synchronizer/)**
-
 ---
 
 ## Verification Status
