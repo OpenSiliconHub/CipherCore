@@ -27,15 +27,6 @@ Reference documents:
 * Draft: *ChaCha Test Vectors* (draft-strombergson-chacha-test-vectors-00)
   https://datatracker.ietf.org/doc/html/draft-strombergson-chacha-test-vectors-00
 
-A Makefile is provided in this directory to simplify simulation of all four test vectors using **Icarus Verilog (iverilog)**.
-
-To run all simulations:
-
-```bash
-cd crypto/Chacha20
-make sim
-```
-
 ## Formal Verification
 
 Formal verification for this core is currently **work in progress** and has not yet been completed.

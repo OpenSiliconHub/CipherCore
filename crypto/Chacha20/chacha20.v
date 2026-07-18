@@ -1,5 +1,10 @@
 `timescale 1ns/1ps
 
+//==============================================================================
+// Copyright (c) 2026 opensiliconhub contributors
+// SPDX-License-Identifier : Apache-2.0
+//==============================================================================
+
 module chacha20 #(
   parameter ITERATIONS = 10   // number of "double rounds" (column + diagonal)
 )(
